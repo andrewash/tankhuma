@@ -1,0 +1,43 @@
+<h1>Listing words</h1>
+<a href="../tankhuma">Home</a> | <%= link_to 'Add Word', new_word_path %>
+<p></p>
+<table>
+  <tr>
+    <th>Order</th>
+    <th>Hebrew</th>
+	<th>Translation</th>    
+	<th>Punc.</th>
+	<th>Type</th>
+	<th>Structure?</th>
+	<th>Meanings</th>
+	<th>Verb Shoresh</th>
+	<th>Verb Form</th>
+    <th>Verb Binyan</th>
+    <th>Verb Pgn</th>
+    <th>Verb Suffix</th>
+    <th>QuoteID</th>
+  </tr>
+
+<% @words.each do |word| %>
+  <tr>
+    <td><%=h word.word_order %></td>
+    <td><%= link_to word.text, edit_word_path(word) %></td>
+    <td><%=h word.translation %></td>
+	<td><%=h word.punct %></td>
+    <td><%=h word.word_type %></td>
+	<td><%=h word.is_structure_Word %></td>
+	<td><%=h word.meanings %></td>    
+	<td><%=h word.shoresh %></td>
+	<td><%=h word.tense %></td>
+    <td><%=h word.binyan %></td>
+    <td><%=h word.pgn %></td>
+    <td><%=h word.suffix %></td>
+    <td><%=h word.quote_id %></td>	
+    <td><%= link_to 'View', word %></td>
+    <td><%= link_to 'Delete', word, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+<%= link_to 'Add Word', new_word_path %>

@@ -1,0 +1,27 @@
+<h1>Listing quotes</h1>
+<a href="../tankhuma">Home</a> | <%= link_to 'Add Quote', new_quote_path %>
+<p></p>
+<table>
+  <tr>
+    <th>Quote</th>
+    <th>Source</th>
+    <th>Context before</th>
+    <th>Context after</th>
+  </tr>
+
+<% @quotes.each do |quote| %>
+  <tr>
+    <td><%= link_to quote.quote_id, edit_quote_path(quote) %></td>
+    <td><%=h quote.source %></td>
+    <td><%=h quote.context_before %></td>
+    <td><%=h quote.context_after %></td>
+    <td><%= link_to 'View', quote %></td>
+    <td><%= link_to 'Edit', edit_quote_path(quote) %></td>
+    <td><%= link_to 'Delete', quote, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New quote', new_quote_path %>

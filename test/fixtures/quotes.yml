@@ -1,0 +1,11 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  src: 
+  context_before: 
+  context_after: MyText
+
+two:
+  src: 
+  context_before: 
+  context_after: MyText

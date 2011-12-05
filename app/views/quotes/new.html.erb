@@ -1,0 +1,27 @@
+<h1>New quote</h1>
+
+<% form_for(@quote) do |f| %>
+  <%= f.error_messages %>
+
+  <p>
+    <%= f.label :quote_id %><br />
+    <%= f.text_field :quote_id %>
+  </p>
+  <p>
+    <%= f.label :source %><br />
+    <%= f.text_field :source %>
+  </p>
+  <p>
+    <%= f.label :context_before %><br />
+    <%= f.text_area :context_before %>
+  </p>
+  <p>
+    <%= f.label :context_after %><br />
+    <%= f.text_area :context_after %>
+  </p>
+  <p>
+    <%= f.submit 'Create' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', quotes_path %>

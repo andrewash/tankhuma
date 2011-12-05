@@ -1,0 +1,44 @@
+	<tr>
+		<td>
+			<!-- BEGIN TABLE FOR THIS WORD -->
+			<table style="border:1px dotted #77d; width:100%; align:center">
+				<tr>
+					<td align="left">
+						<span class="analysis_word_hebrew">
+							<%=h word.text %>
+						</span>
+					</td>
+					<td align="right">
+						<span class="analysis_word_english">
+							<%=h word.translation %>
+						</span>
+						<%= link_to_remote 'clear', 
+							:url => { :action => 'remove_word', :id => word }
+						 -%>
+					</td>
+				</tr>
+				<tr>
+					<td colspan="2">
+						<p class="analysis_details">
+							<%= word.word_type %>
+							<% if word.word_type.include?("verb") %>
+								<%= word.shoresh %>
+								<%= word.binyan %>
+								<%= word.tense %>
+								<%= word.pgn %>
+							<% end %> 
+						</p>
+						<p class="analysis_details">
+						<% if word.word_type.include?("verb") && word.suffix.length() > 1 %>
+							suffix: &quot;<%= word.suffix %>&quot;
+						<% end %>
+						</p>
+						<p>
+							<%= word.meanings %>
+						</p>
+					</td>
+				</tr>	
+			</table>
+			<!-- END TABLE FOR THIS WORD -->
+		</td>
+	</tr>

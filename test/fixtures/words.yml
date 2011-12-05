@@ -1,0 +1,23 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+one:
+  text: MyString
+  order: 1
+  type: MyString
+  shoresh: MyString
+  binyan: MyString
+  pgn: MyString
+  suffix: MyString
+  meanings: MyString
+  translation: MyString
+
+two:
+  text: MyString
+  order: 1
+  type: MyString
+  shoresh: MyString
+  binyan: MyString
+  pgn: MyString
+  suffix: MyString
+  meanings: MyString
+  translation: MyString

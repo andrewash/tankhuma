@@ -1,0 +1,70 @@
+<%= link_to 'Add Word', new_word_path %>
+<%= link_to 'Back', words_path %>
+
+<p>
+  <b>Text:</b>
+  <%=h @word.text %>
+</p>
+<p>
+  <b>Punctuation:</b>
+  <%=h @word.punct %>
+</p>
+
+<p>
+  <b>Order:</b>
+  <%=h @word.word_order %>
+</p>
+
+<p>
+  <b>Type:</b>
+  <%=h @word.word_type %>
+</p>
+
+<p>
+  <b>Structure Word?:</b>
+  <%=h @word.is_structure_Word %>
+</p>
+
+<p>
+  <b>Quote ID:</b>
+  <%=h @word.quote_id %>
+</p>
+
+<p>
+  <b>Shoresh:</b>
+  <%=h @word.shoresh %>
+</p>
+
+<p>
+  <b>Form:</b>
+  <%=h @word.tense %>
+</p>
+
+<p>
+  <b>Binyan:</b>
+  <%=h @word.binyan %>
+</p>
+
+<p>
+  <b>Pgn:</b>
+  <%=h @word.pgn %>
+</p>
+
+<p>
+  <b>Suffix:</b>
+  <%=h @word.suffix %>
+</p>
+
+<p>
+  <b>Meanings:</b>
+  <%=h @word.meanings %>
+</p>
+
+<p>
+  <b>Translation:</b>
+  <%=h @word.translation %>
+</p>
+
+
+<%= link_to 'Edit', edit_word_path(@word) %> |
+<%= link_to 'Back', words_path %>

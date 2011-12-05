@@ -1,0 +1,91 @@
+<h1>New word</h1>
+
+<% form_for(@word) do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :word_order, "Order:"  %><br />
+    <%= f.text_field :word_order %>
+  </p>
+
+  <p>
+    <%= f.label :text, 'Hebrew Text:' %><br />
+    <%= f.text_field :text %>
+  </p>
+ <p>
+    <%= f.label :word_type, "Grammatical Type:"  %><br />
+ 	<%=
+		f.select :word_type,
+					Word::TYPES_LIST,
+					:prompt => "Select type"
+	%>
+  </p>
+  <p>
+    <%= f.label :is_structure_Word, "Is this a structure word?" %><br />
+    <%=
+		f.select :is_structure_Word,
+					Word::IS_STRUCT,
+					:prompt => "yes/no?"
+	%>
+  </p>
+
+  <p>
+    <%= f.label :punct, "Punctuation to follow this word:" %><br />
+    <%=
+		f.select :punct,
+					Word::PUNCT_LIST,
+					:prompt => "Select punctuation to follow this word"
+	%>
+  </p>
+  <p>
+    <%= f.label :translation, 'Translation:' %><br />
+    <%= f.text_field :translation %>
+  </p>
+  <p>
+    <%= f.label :meanings, 'Meanings:' %><br />
+    <%= f.text_area :meanings %>
+  </p>
+  <p>
+    <%= f.submit 'Add this word' %>
+  </p>
+
+ 
+  <p>
+    <%= f.label :shoresh, 'Verb Shoresh:' %><br />
+    <%= f.text_field :shoresh %>
+  </p>
+  <p>
+    <%= f.label :tense, "Verb Form:" %><br />
+    <%=
+		f.select :tense,
+					Word::FORMS_LIST,
+					:prompt => "Select form"
+	%>
+  </p>
+  <p>
+    <%= f.label :binyan, 'Verb Binyan' %><br />
+    <%=
+		f.select :binyan,
+					Word::BINYAN_LIST,
+					:prompt => "Select binyan"
+	%>
+  </p>
+  <p>
+    <%= f.label :pgn, 'Verb PGN' %><br />
+    <%= f.text_field :pgn %>
+  </p>
+  <p>
+    <%= f.label :suffix, 'Verb Suffix' %><br />
+    <%= f.text_field :suffix %>
+  </p>
+  <p>
+    <%= f.label :quote_id, 'Quote ID:' %><br />
+    <%= f.text_field :quote_id %>
+  </p>
+
+
+  <p>
+    <%= f.submit 'Add this word' %>
+  </p>
+<% end %>
+
+<%= link_to 'Back', words_path %>

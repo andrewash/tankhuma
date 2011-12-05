@@ -1,0 +1,39 @@
+	<div class="HebrewSourceText" dir="RTL">
+	<% for word in @words -%>
+		<span class="<%= word.word_type %>">
+			<% if word.punct.nil? != true && word.punct.include?("br") -%>
+				<% if word.punct[0..1] == "br" -%>				
+					<%= link_to_remote word.text, 
+						:url => { :action => 'analyze_word', :id => word }
+					 -%>
+					<br />
+				<% else -%>
+					<%= link_to_remote word.text, 
+						:url => { :action => 'analyze_word', :id => word }
+					 -%><%= word.punct[0..0] -%>
+					<br />
+				<% end -%>
+			<% else -%>
+				<% if word.punct.nil? != true && word.punct.include?("nsp") -%>
+					<!-- Case: Word + Punctuation but no line break -->
+					<span class="nsp">
+					<%= link_to_remote word.text, 
+						:url => { :action => 'analyze_word', :id => word }
+				 	-%>
+					</span>
+				<% elsif word.punct.nil? != true -%>
+					<!-- Case: Word + Punctuation but no line break -->
+					<%= link_to_remote word.text + word.punct[0..0], 
+						:url => { :action => 'analyze_word', :id => word }
+				 	-%>
+				<% else %>
+					<!-- Case: Word without punctuation or line break -->
+					<%= link_to_remote word.text, 
+						:url => { :action => 'analyze_word', :id => word }
+				 	-%>
+				<% end -%>
+			<% end -%>
+		</span>
+	<% end -%>
+	</div>
+<BR/><BR/>

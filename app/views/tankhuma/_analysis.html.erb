@@ -1,0 +1,5 @@
+<div class="analysis-title">Word Watch:</div>
+<div class="analysis=clear"><%= link_to '(clear this list)', :action => :clear_analysis %></div>
+<table>
+        <%= render(:partial => "word" , :collection => analysis.words) %>
+</table>
