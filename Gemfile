@@ -18,7 +18,8 @@ end
 # Supports rspec as test-driven-development Test Suite
 group :development do
   gem 'mysql'             # Supports mysql as Database-Layer
-  gem 'magic_encoding'    # Allows pre-pending every file with an encoding setting (i.e. utf-8)
+  #REM gem 'magic_encoding'    # Allows pre-pending every file with an encoding setting (i.e. utf-8)
+    # removed magic_encoding in favour of manually copy/paste'ing the encoding: utf-8 setting into the few source files I have in this app...
 end
 
 group :test do
