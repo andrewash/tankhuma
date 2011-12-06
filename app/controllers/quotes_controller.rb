@@ -1,3 +1,5 @@
+# encoding: utf-8   [adds support for Hebrew characters via Unicode utf-8]
+
 class QuotesController < ApplicationController
   # GET /quotes
   # GET /quotes.xml
