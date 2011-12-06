@@ -8,6 +8,7 @@ gem 'rails', '2.3.14'
 
 # Supports heroku as Staging Server
 gem 'heroku'
+gem 'taps'   # to push and pull SQL databases between dev, staging, and production environments
 
 group :production do
   # Postgres support for production

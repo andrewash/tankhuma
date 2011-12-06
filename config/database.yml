@@ -38,12 +38,10 @@ test:
   password: newd-eb-ei-phlap-e-ki
   host: 127.0.0.1
 
+# heroku settings
 production:
-  adapter: mysql
-  encoding: utf8
-  reconnect: false
-  database: tankhuma_production
+  adapter: sqlite3
+  database: db/production.sqlite3
   pool: 5
-  username: root
-  password: newd-eb-ei-phlap-e-ki
-  host: 127.0.0.1
+  timeout: 5000
+
