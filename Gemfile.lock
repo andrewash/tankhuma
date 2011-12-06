@@ -19,6 +19,7 @@ GEM
       term-ansicolor (~> 1.0.5)
     launchy (2.0.5)
       addressable (~> 2.2.6)
+    magic_encoding (0.0.2)
     mime-types (1.17.2)
     mysql (2.8.1)
     pg (0.11.0)
@@ -53,6 +54,7 @@ PLATFORMS
 
 DEPENDENCIES
   heroku
+  magic_encoding
   mysql
   pg
   rails (= 2.3.14)
