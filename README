@@ -1,29 +1,40 @@
 =====================
+ The Tankhuma text study web app
+	a final project for Prof. Nechemiah Polen's course in 
+	Hebrew College's Masters of Arts in Jewish Studies
+ by Andrew Michael Ash
+=====================
 
 Q: What does this app do?
 A: It's a prototype UX for reading a bilingual (hebrew/english) text, and viewing grammatical details about any word in that text. 
 
 Q: When did you build it?
-A: This was the first Ruby on Rails app I had ever built, so I began with the book "Ruby on Rails 2 Tutorial", essentially implementing the entire app described in that book, then customized it extensively to suit this purpose. I was also responsible for all of the textual work - the translations & correctly inputing the Hebrew text.
+A: In the fall of 2010. The first Ruby on Rails app I built, I began with the book "Ruby on Rails 2 Tutorial", essentially implementing the entire app described in that book, then customized it extensively to suit this purpose. I was also responsible for all of the textual work - the translations & correctly inputing the Hebrew text.
 
-Nechemiah, I would love to schedule some time to meet with you in person to review the assignment. I'll try to provide a brief explanation of my goals and how the software works in this e-mail, but I'm sure I could give you a much better sense in person by giving you a demo. Are there any times that work well for you next week? In particular, Tues I'm free after 11am until 5pm.
+--(from my original email documenting this project)----------------------------
+FROM: Andrew Michael Ash
+DATE: ~ Oct 21, 2010
+SUBJECT: Andrew's Tankhuma text study web app (for your review)
+BODY:
+Dear Rabbi Nechemiah Polen, I would love to schedule some time to meet with you in person to review the assignment. I'll try to provide a brief explanation of my goals and how the software works in this e-mail, but I'm sure I could give you a much better sense in person by giving you a demo. 
 
 Hours devoted to this project
-This presentation, including research time spent analyzing the text with BDB, Frank, & Jastrow, and writing the software program, took about 25-30 hours, so it's been a significant investment of time thus far. In hindsight I think I took on too much text to translate and too large a vision for the computer software, which is partly why this took so long to deliver to you.
+This presentation, including research time spent analyzing the text with BDB, Frank, & Jastrow, and writing the software program, took about 25-30 hours.
 
 Areas of the Web Application to Examine
-(1) While http://hcwebs:4000/tankhuma may appear to be a simple website with Hebrew & English actually it's all powered by a database that I designed & created to store information about hebrew texts and translations.
-- Each word in the original Hebrew is analyzed in this table: http://hcwebs:4000/words 
+(1) Navigate to http://http://warm-moon-8791.heroku.com/tankhuma 
+It may appear to be a simple website with Hebrew & English actually it's all powered by a database that I designed & created to store information about hebrew texts and translations.
+- Each word in the original Hebrew is analyzed in this table: http://http://warm-moon-8791.heroku.com/words 
 - The table itself looks at first like a large spreadsheet because that's a familiar design for such things, but in fact if you try clicking "Add Word" you'll see a structured way of entering information about each new verb. For example, it knows to ask for the form, binyan, pgn, etc. of a verb and gives you a list of all the valid types of binyanim to choose from. You can also edit an existing word, delete a word (but this would alter the text), or view a word with all its related info.
 - Under the "Meanings" column in this table I've included comments in the form of Translator's Notes. Some talk about the deeper meaning of the text. I would certainly like to have written more of these comments.
 
-(2) The main page looks like this: http://hcwebs:4000/tankhuma
+(2) The main page looks like this: http://http://warm-moon-8791.heroku.com/tankhuma 
 It takes each of the Hebrew words entered through the form in (1) and structures them into the fluid Hebrew text you see presented on the screen.
 - Try clicking any word in the Hebrew text. You'll see that it gets added to the "Word Watch" floating pane. This is intended to help a student/teacher compare the syntax of particular words. It works a little like a shopping cart - simply click on whichever words you'd like to see analyzed and then you can compare them. Very useful when comparing verbs, for example, or really for a newer student. As you scroll down the page the pane scrolls with you.
 - Click the "(clear)" links to clear out the entire "Word Watch" pane, or just one word. This does not delete the word from my translation (which I have backed up), on the contrary, it just takes it away from your "shopping cart" like "Word Watch" pane.
 - A fluid translation is offered in english on this page. This translation is based off all my research as seen in (1).
 
-(3) Quotations from Tanakh are source-checked to explain the context before & after each quotation: http://hcwebs:4000/quotes
+(3) Quotations from Tanakh [i.e. the Jewish Bible] are source-checked to explain the context before & after each quotation: http://http://warm-moon-8791.heroku.com/quotes
 
 That's all for now.
 I hope you find this to be an interesting presentation! If the presentation inspires in you any ideas for how technology tools (like the one I built here) could enhance the Jewish learning experience I'd love to listen to your insights.
